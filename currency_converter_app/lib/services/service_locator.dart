@@ -15,9 +15,9 @@ import '../business_logic/view_models/choose_favorites_viewmodel.dart';
 GetIt serviceLocator = GetIt.instance;
 
 void setupServiceLocator() {
-  serviceLocator.registerLazySingleton<WebApi>(() => null);
-  serviceLocator.registerLazySingleton<StorageService>(() => null);
-  serviceLocator.registerLazySingleton<CurrencyService>(() => null);
+  serviceLocator.registerLazySingleton<WebApi>(() => WebApiImpl());
+  serviceLocator.registerLazySingleton<StorageService>(() => StorageServiceImpl());
+  serviceLocator.registerLazySingleton<CurrencyService>(() => CurrencyServiceImpl());
 
   serviceLocator.registerFactory<CalculateScreenViewModel>(() => null);
   serviceLocator.registerFactory < ChooseFavoritesViewModel(() => null);
